@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start — Личный трекер и планировщик</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Start</h1>
+    <div class="user-profile">
+      <div class="user-info">
+        <div class="user-name">User</div>
+        <div class="user-status">Продуктивность: 82%</div>
+      </div>
+      <div class="avatar">U</div>
+    </div>
+  </header>
+
+  <main class="start-screen" id="scrollContainer">
+
+    <!-- ГРУППА 1: ЗАДАЧИ И ПЛАНЫ -->
+    <section class="tile-group">
+      <div class="group-title">Задачи на сегодня</div>
+      <div class="tiles-grid">
+        
+        <div class="tile large bg-blue">
+          <div>
+            <div class="tile-heading">Фокус дня (3 из 5)</div>
+            <ul class="task-list">
+              <li class="done">☑ Сдать практическую работу №3</li>
+              <li class="done">☑ Утренняя зарядка 20 мин</li>
+              <li class="done">☑ Прочитать 15 страниц книги</li>
+              <li>☐ Подготовить презентацию</li>
+              <li>☐ Повторить английские слова</li>
+            </ul>
+          </div>
+          <div class="tile-label">Планировщик задач</div>
+        </div>
+
+        <div class="tile medium bg-teal">
+          <div>
+            <div class="tile-big-num">18</div>
+            <div class="tile-sub">Среда, Ноябрь</div>
+          </div>
+          <div class="tile-label">Календарь</div>
+        </div>
+
+        <div class="tile medium bg-orange">
+          <div>
+            <div class="tile-big-num">2</div>
+            <div class="tile-sub">Срочных дела</div>
+          </div>
+          <div class="tile-label">Дедлайны</div>
+        </div>
+
+        <div class="tile wide bg-purple">
+          <div class="tile-row">
+            <div>
+              <div class="tile-big-num">25:00</div>
+              <div class="tile-sub">Сессия глубокой работы</div>
+            </div>
+            <div class="tile-side-icon">⏱</div>
+          </div>
+          <div class="tile-label">Таймер Фокуса</div>
+        </div>
+
+        <div class="tile small bg-green" title="Новая задача"><div class="tile-icon">➕</div></div>
+        <div class="tile small bg-amber" title="Важное"><div class="tile-icon">★</div></div>
+        <div class="tile small bg-darkblue" title="Архив"><div class="tile-icon">📁</div></div>
+        <div class="tile small bg-magenta" title="Напоминания"><div class="tile-icon">🔔</div></div>
+
+      </div>
+    </section>
+
+    <!-- ГРУППА 2: ТРЕКЕР ПРИВЫЧЕК -->
+    <section class="tile-group">
+      <div class="group-title">Трекер привычек</div>
+      <div class="tiles-grid">
+
+        <div class="tile wide bg-green">
+          <div class="tile-row">
+            <div>
+              <div class="tile-big-num">14 дней</div>
+              <div class="tile-sub">Без пропусков (Рекорд: 21)</div>
+            </div>
+            <div class="tile-side-icon">🔥</div>
+          </div>
+          <div class="tile-label">Ударный режим</div>
+        </div>
+
+        <div class="tile medium bg-darkblue">
+          <div>
+            <div class="tile-big-num">1.5 л</div>
+            <div class="tile-sub">Цель: 2.0 л</div>
+          </div>
+          <div class="tile-label">Вода</div>
+        </div>
+
+        <div class="tile medium bg-purple">
+          <div>
+            <div class="tile-big-num">7.5 ч</div>
+            <div class="tile-sub">Качество: 90%</div>
+          </div>
+          <div class="tile-label">Трекер сна</div>
+        </div>
+
+        <div class="tile medium bg-amber">
+          <div class="tile-icon">📖</div>
+          <div class="tile-label">Чтение (15/20 мин)</div>
+        </div>
+
+        <div class="tile medium bg-orange">
+          <div class="tile-icon">🏃</div>
+          <div class="tile-label">Активность</div>
+        </div>
+
+        <div class="tile wide bg-teal">
+          <div>
+            <div class="week-title">Прогресс за неделю</div>
+            <div class="week-dots">ПН● ВТ● СР● ЧТ○ ПТ○ СБ○ ВС○</div>
+          </div>
+          <div class="tile-label">Статистика привычек</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ГРУППА 3: АНАЛИТИКА И ЗАМЕТКИ -->
+    <section class="tile-group">
+      <div class="group-title">Заметки и цели</div>
+      <div class="tiles-grid">
+
+        <div class="tile medium bg-magenta">
+          <div class="tile-icon">🎯</div>
+          <div class="tile-label">Цели на месяц</div>
+        </div>
+
+        <div class="tile medium bg-blue">
+          <div class="tile-icon">💡</div>
+          <div class="tile-label">Быстрые заметки</div>
+        </div>
+
+        <div class="tile wide bg-darkblue">
+          <div>
+            <div class="tile-big-num">82%</div>
+            <div class="tile-sub">Выполнено задач за ноябрь</div>
+          </div>
+          <div class="tile-label">Общая аналитика</div>
+        </div>
+
+        <div class="tile large bg-teal">
+          <div class="quote-box">
+            <div class="quote-text">
+              «Дисциплина — это решение делать то, чего очень не хочется делать, чтобы достичь того, чего очень хочется достичь».
+            </div>
+          </div>
+          <div class="tile-label">Цитата дня</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ГРУППА 4: ЭНЕРГИЯ И БАЛАНС (для уверенного горизонтального скролла) -->
+    <section class="tile-group">
+      <div class="group-title">Энергия и баланс</div>
+      <div class="tiles-grid">
+
+        <div class="tile wide bg-orange">
+          <div class="tile-row">
+            <div>
+              <div class="tile-big-num">8 450</div>
+              <div class="tile-sub">Шагов пройдено сегодня</div>
+            </div>
+            <div class="tile-side-icon">👟</div>
+          </div>
+          <div class="tile-label">Шагомер</div>
+        </div>
+
+        <div class="tile medium bg-green">
+          <div>
+            <div class="tile-big-num">😊</div>
+            <div class="tile-sub">Отличное</div>
+          </div>
+          <div class="tile-label">Настроение</div>
+        </div>
+
+        <div class="tile medium bg-blue">
+          <div>
+            <div class="tile-big-num">15 м</div>
+            <div class="tile-sub">Без телефона</div>
+          </div>
+          <div class="tile-label">Медитация</div>
+        </div>
+
+        <div class="tile wide bg-purple">
+          <div>
+            <div class="tile-big-num">3 ч 20 м</div>
+            <div class="tile-sub">Экранное время (-15% к вчера)</div>
+          </div>
+          <div class="tile-label">Цифровой детокс</div>
+        </div>
+
+        <div class="tile small bg-teal"><div class="tile-icon">💧</div></div>
+        <div class="tile small bg-amber"><div class="tile-icon">🍎</div></div>
+        <div class="tile small bg-magenta"><div class="tile-icon">💊</div></div>
+        <div class="tile small bg-darkblue"><div class="tile-icon">⚙️</div></div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Позволяет листать экран вправо-влево обычным колёсиком мыши
+    const scrollContainer = document.getElementById('scrollContainer');
+    scrollContainer.addEventListener('wheel', (evt) => {
+      if (evt.deltaY !== 0) {
+        evt.preventDefault();
+        scrollContainer.scrollLeft += evt.deltaY;
+      }
+    });
+  </script>
+
+</body>
+</html>

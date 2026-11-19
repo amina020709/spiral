@@ -1,0 +1,231 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1b1442 0%, #311d6b 50%, #1c2c5e 100%);
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Шапка экрана Пуск */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 60px 15px;
+  flex-shrink: 0;
+}
+
+header h1 {
+  font-size: 52px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
+.user-info {
+  text-align: right;
+}
+
+.user-name {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.user-status {
+  font-size: 14px;
+  color: #b8b8d1;
+}
+
+.avatar {
+  width: 54px;
+  height: 54px;
+  background-color: #008299;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Основной контейнер с горизонтальным скроллом */
+main.start-screen {
+  display: flex;
+  gap: 90px;
+  padding: 20px 120px 40px 60px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-grow: 1;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Стилизация скроллбара в стиле Windows 8 */
+main.start-screen::-webkit-scrollbar {
+  height: 12px;
+}
+
+main.start-screen::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+main.start-screen::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+main.start-screen::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* Группа плиток (колонка) */
+.tile-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.group-title {
+  font-size: 21px;
+  font-weight: 300;
+  color: #d1d1e0;
+  margin-bottom: 4px;
+}
+
+/* Сетка для плиток: автоматически подстраивает ширину группы без пустых колонок */
+.tiles-grid {
+  display: grid;
+  grid-auto-flow: column dense;
+  grid-template-rows: repeat(6, 78px);
+  grid-auto-columns: 78px;
+  gap: 10px;
+}
+
+/* Базовый стиль плитки */
+.tile {
+  position: relative;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.15s ease, outline 0.1s ease;
+  user-select: none;
+}
+
+.tile:hover {
+  outline: 3px solid rgba(255, 255, 255, 0.55);
+  transform: scale(0.985);
+}
+
+/* Размеры плиток Windows 8 */
+.small  { grid-column: span 1; grid-row: span 1; padding: 8px; align-items: center; justify-content: center; }
+.medium { grid-column: span 2; grid-row: span 2; }
+.wide   { grid-column: span 4; grid-row: span 2; }
+.large  { grid-column: span 4; grid-row: span 4; }
+
+/* Цвета плиток Metro UI */
+.bg-blue     { background-color: #2d89ef; }
+.bg-teal     { background-color: #00aba9; }
+.bg-green    { background-color: #00a300; }
+.bg-orange   { background-color: #da532c; }
+.bg-purple   { background-color: #7e3878; }
+.bg-magenta  { background-color: #ff0097; }
+.bg-darkblue { background-color: #2b5797; }
+.bg-amber    { background-color: #e3a21a; }
+
+/* Увеличенный контент внутри плиток */
+.tile-heading {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.tile-icon {
+  font-size: 46px;
+  text-align: center;
+  margin: auto 0;
+}
+
+.small .tile-icon {
+  font-size: 30px;
+}
+
+.tile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tile-side-icon {
+  font-size: 48px;
+}
+
+.tile-label {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.tile-big-num {
+  font-size: 52px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.tile-sub {
+  font-size: 15px;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+.task-list {
+  list-style: none;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 14px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.week-title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.week-dots {
+  letter-spacing: 5px;
+  font-size: 18px;
+}
+
+.quote-box {
+  margin: auto 0;
+}
+
+.quote-text {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.45;
+}
